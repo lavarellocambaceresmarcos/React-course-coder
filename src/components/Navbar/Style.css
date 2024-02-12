@@ -1,0 +1,41 @@
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li a {
+    color: #fff!important;
+}
+
+.main-nav-container{
+    background-color: #319C1B!important;
+    height: 80px;
+    box-shadow: 1px 5px 30px rgb(173, 173, 173);
+}
+
+.logo-image {
+    height: 48px;
+    margin-right: 5px;
+}
+
+.logo-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-main-container h1 {
+    color: #fff;
+}
