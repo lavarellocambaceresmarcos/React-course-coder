@@ -4,11 +4,11 @@ import Logo from "./Images/IPS-logo.png"
 import {NavLink, Link } from "react-router-dom"
 const Navbar = () => {
     return (
-       <nav>
+       <nav className="main-nav">
         <Link to='/'>
-            Home
+            <img src={Logo} alt=""  className="logo-image"/>
         </Link>
-        <div>
+        <div className="nav-links-container">
           <NavLink to={`/category/Asistencia`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Asistencia</NavLink>
           <NavLink to={`/category/Recreativos`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Recreativos</NavLink>
           <NavLink to={`/category/Salud fisica`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Salud fisica</NavLink>
