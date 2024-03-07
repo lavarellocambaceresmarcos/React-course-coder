@@ -1,48 +1,20 @@
 import CartWidget from "../CartWidget/CartWidget"
-import LoginButton from "../LoginButton/LoginButton"
 import './Style.css'
 import Logo from "./Images/IPS-logo.png"
+import {NavLink, Link } from "react-router-dom"
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid main-nav-container">
-    <a className="navbar-brand logo-main-container" href="#">
-      <img src={Logo} alt="logo" className="logo-image"/>
-      <h1>
-      IPS
-      </h1>
-    </a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse nav-list-container" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Metodología</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Cursos</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">FAQ</a>
-        </li>
-        <li>
-          <a className="nav-link" href="#">
-            <CartWidget/>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <LoginButton/>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+       <nav>
+        <Link to='/'>
+            Home
+        </Link>
+        <div>
+          <NavLink to={`/category/Asistencia`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Asistencia</NavLink>
+          <NavLink to={`/category/Recreativos`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Recreativos</NavLink>
+          <NavLink to={`/category/Salud fisica`} className={({isActive}) => isActive ? 'Activeoption' : 'Option'}>Salud fisica</NavLink>
+        </div>
+        <CartWidget></CartWidget>
+       </nav>
     )
 
     
